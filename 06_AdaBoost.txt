@@ -1,0 +1,6 @@
+from sklearn.ensemble import AdaBoostRegressor
+from sklearn.tree import DecisionTreeRegressor
+
+def build_model(random_state=42):
+    base=DecisionTreeRegressor(max_depth=4, min_samples_leaf=3, random_state=random_state)
+    return AdaBoostRegressor(estimator=base, n_estimators=40, learning_rate=0.06, loss='linear', random_state=random_state)

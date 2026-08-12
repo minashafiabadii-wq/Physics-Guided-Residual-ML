@@ -1,0 +1,4 @@
+from sklearn.linear_model import Ridge
+
+def build_model(random_state=42):
+    return Ridge(alpha=1.0)

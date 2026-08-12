@@ -1,0 +1,4 @@
+from sklearn.ensemble import ExtraTreesRegressor
+
+def build_model(random_state=42):
+    return ExtraTreesRegressor(n_estimators=30, max_depth=None, min_samples_leaf=2, max_features=0.8, random_state=random_state, n_jobs=-1)
