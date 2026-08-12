@@ -1,4 +1,4 @@
-# Physics-Guided Residual Machine Learning for Geomechanical Stress Profiles
+# Physics-Guided Residual Machine Learning for Cross-Well Stress Profile Reproduction
 
 This repository contains the Python implementation associated with the manuscript:
 
@@ -6,80 +6,50 @@ This repository contains the Python implementation associated with the manuscrip
 
 ## Overview
 
-The workflow implements a physics-guided residual machine-learning framework for reproducing calibrated horizontal-stress profiles across wells.
+This project implements a physics-guided residual machine learning workflow for reproducing calibrated horizontal-stress profiles across wells.
 
-The approach:
-- retains analytical geomechanical stress priors,
-- predicts calibration residuals using machine learning,
-- evaluates models using Leave-One-Well-Out validation.
+The framework combines:
+- analytical geomechanical stress priors
+- machine-learning residual correction
+- cross-well validation
 
-## Models Included
+## Machine Learning Models
 
-The benchmark includes:
+The repository includes implementations of:
+
 - Ridge Regression
-- KNN
-- SVR
+- K-Nearest Neighbors (KNN)
+- Support Vector Regression (SVR)
 - Random Forest
 - Extra Trees
 - AdaBoost
 - XGBoost
 - LightGBM
 - CatBoost
-- MLP Neural Network
+- Neural Network models
 
-## Installation
+## Requirements
 
-```bash
-pip install -r requirements.txt
-```
+Python libraries:
 
-## Running the Workflow
+- numpy
+- pandas
+- scikit-learn
+- xgboost
+- lightgbm
+- catboost
+- matplotlib
 
-Full pipeline:
+## Usage
 
-```bash
-python run_pipeline_full.py
-```
+Run the individual Python scripts corresponding to each machine-learning model.
 
-Single blind-well fold:
-
-```bash
-python run_single_fold.py
-```
-
-Merge outputs:
-
-```bash
-python merge_outputs.py
-```
-
-## Repository Structure
-
-```
-models/
-    Individual machine-learning model implementations
-
-run_pipeline_full.py
-    Complete benchmark workflow
-
-run_single_fold.py
-    Leave-one-well-out execution
-
-merge_outputs.py
-    Result aggregation
-
-requirements.txt
-    Python dependencies
-```
-
-## Data Availability
-
-The original geological dataset is not included because it contains confidential well information. Users should provide their own compatible input dataset.
+The workflow requires the appropriate input dataset described in the associated manuscript.
 
 ## Reproducibility
 
-The workflow reproduces the computational methodology described in the associated manuscript.
+The repository provides the source codes used for the machine-learning benchmark and residual prediction workflow.
 
 ## License
 
-An open-source license can be selected by the authors before public release.
+The code is provided for academic and research purposes.
